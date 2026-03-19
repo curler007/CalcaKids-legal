@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CalcaKids — App Store Screenshots</title>
+    <style>
+        :root {
+            --gold: #FFD95E;
+            --gold-mid: #FFC200;
+            --gold-dark: #E8A800;
+            --blue: #3CB0E1;
+            --blue-dark: #1A8FC0;
+            --dark: #1C1C1E;
+            --w: 430px;
+            --h: 932px;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background: #D1D1D6;
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", sans-serif;
+            padding: 48px 32px;
+        }
+
+        .page-title {
+            text-align: center;
+            font-size: 22px;
+            font-weight: 700;
+            color: #1C1C1E;
+            margin-bottom: 6px;
+        }
+
+        .page-sub {
+            text-align: center;
+            font-size: 13px;
+            color: #636366;
+            margin-bottom: 48px;
+            line-height: 1.6;
+        }
+
+        .grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 48px;
+            justify-content: center;
+        }
+
+        .screen-wrap {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .label {
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: #636366;
+        }
+
+        .screen {
+            width: var(--w);
+            height: var(--h);
+            border-radius: 52px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 32px 80px rgba(0,0,0,0.30), 0 0 0 1px rgba(0,0,0,0.08);
+            flex-shrink: 0;
+        }
+
+        /* ─── PHONE MOCKUP ─── */
+        .phone {
+            width: 210px;
+            height: 420px;
+            background: #0A0A0A;
+            border-radius: 38px;
+            border: 7px solid #2A2A2E;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 24px 64px rgba(0,0,0,0.55), inset 0 0 0 1px rgba(255,255,255,0.06);
+            flex-shrink: 0;
+        }
+
+        .phone::after {
+            content: '';
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 72px;
+            height: 22px;
+            background: #2A2A2E;
+            border-radius: 11px;
+            z-index: 5;
+        }
+
+        .phone-screen {
+            width: 100%;
+            height: 100%;
+            background: #fff;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* ─── SCREEN 1: HERO ─── */
+        .s1 {
+            background: linear-gradient(150deg, #FFE566 0%, #FFBB00 55%, #FF9D00 100%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 56px 48px;
+            gap: 0;
+        }
+
+        .s1-circle-tl {
+            position: absolute;
+            top: -100px; left: -80px;
+            width: 320px; height: 320px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.18);
+        }
+
+        .s1-circle-br {
+            position: absolute;
+            bottom: -120px; right: -80px;
+            width: 360px; height: 360px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.12);
+        }
+
+        .s1-icon {
+            width: 120px;
+            height: 120px;
+            border-radius: 27px;
+            overflow: hidden;
+            box-shadow: 0 12px 40px rgba(0,0,0,0.25);
+            margin-bottom: 36px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .s1-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .s1-title {
+            font-size: 58px;
+            font-weight: 800;
+            color: #1C1C1E;
+            letter-spacing: -2.5px;
+            text-align: center;
+            line-height: 1;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .s1-tagline {
+            font-size: 21px;
+            font-weight: 500;
+            color: rgba(28,28,30,0.72);
+            text-align: center;
+            line-height: 1.35;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* ─── SCREEN 2: LIGHT TABLE ─── */
+        .s2 {
+            background: linear-gradient(150deg, #C6EEFF 0%, #7EC8E8 100%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            padding: 72px 48px 80px;
+        }
+
+        .s2-text {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 16px;
+            z-index: 1;
+        }
+
+        .s2-eyebrow {
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--blue-dark);
+        }
+
+        .s2-title {
+            font-size: 40px;
+            font-weight: 800;
+            color: #1C1C1E;
+            letter-spacing: -1.5px;
+            text-align: center;
+            line-height: 1.1;
+        }
+
+        .s2-sub {
+            font-size: 17px;
+            font-weight: 400;
+            color: rgba(28,28,30,0.65);
+            text-align: center;
+            line-height: 1.4;
+        }
+
+        /* App screen inside phone for s2 */
+        .app-image {
+            width: 100%;
+            height: 100%;
+            background: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        /* Glowing butterfly SVG placeholder */
+        .glow-image {
+            width: 140px;
+            height: 130px;
+            opacity: 0.95;
+        }
+
+        /* App buttons — top right, horizontal */
+        .app-buttons {
+            position: absolute;
+            top: 40px;
+            right: 10px;
+            display: flex;
+            flex-direction: row;
+            gap: 8px;
+        }
+
+        .app-btn {
+            width: 38px;
+            height: 38px;
+            border-radius: 12px;
+            background: rgba(255,217,94,0.95);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        }
+
+        /* ─── SCREEN 3: LOCK ─── */
+        .s3 {
+            background: linear-gradient(160deg, #3BC8F5 0%, #1A8FC0 100%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            padding: 72px 48px 80px;
+        }
+
+        .s3-circle-tl {
+            position: absolute;
+            top: -80px; right: -60px;
+            width: 280px; height: 280px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.12);
+        }
+
+        .s3-circle-br {
+            position: absolute;
+            bottom: -100px; left: -70px;
+            width: 300px; height: 300px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.10);
+        }
+
+        .s3-text {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 16px;
+            z-index: 1;
+        }
+
+        .s3-eyebrow {
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: rgba(255,255,255,0.7);
+        }
+
+        .s3-title {
+            font-size: 40px;
+            font-weight: 800;
+            color: #fff;
+            letter-spacing: -1.5px;
+            text-align: center;
+            line-height: 1.1;
+        }
+
+        .s3-sub {
+            font-size: 17px;
+            font-weight: 400;
+            color: rgba(255,255,255,0.65);
+            text-align: center;
+            line-height: 1.4;
+        }
+
+        /* Lock indicator on app screen */
+        .lock-badge {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -60%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            z-index: 10;
+        }
+
+        .lock-pill {
+            background: rgba(255,217,94,0.92);
+            border-radius: 20px;
+            padding: 6px 14px;
+            font-size: 10px;
+            font-weight: 700;
+            color: #1C1C1E;
+            white-space: nowrap;
+        }
+
+        /* ─── SCREEN 4: LANGUAGES ─── */
+        .s4 {
+            background: #F2F2F7;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 64px 48px;
+            gap: 0;
+        }
+
+        .s4-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--gold);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 28px;
+            box-shadow: 0 8px 24px rgba(255,194,0,0.35);
+        }
+
+        .s4-title {
+            font-size: 36px;
+            font-weight: 800;
+            color: #1C1C1E;
+            letter-spacing: -1.2px;
+            text-align: center;
+            line-height: 1.1;
+            margin-bottom: 12px;
+        }
+
+        .s4-sub {
+            font-size: 17px;
+            color: #636366;
+            text-align: center;
+            margin-bottom: 48px;
+            line-height: 1.4;
+        }
+
+        .lang-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            width: 100%;
+        }
+
+        .lang-pill {
+            background: #fff;
+            border-radius: 16px;
+            padding: 14px 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+        }
+
+        .lang-flag {
+            font-size: 26px;
+            line-height: 1;
+        }
+
+        .lang-name {
+            font-size: 15px;
+            font-weight: 600;
+            color: #1C1C1E;
+        }
+
+        .lang-native {
+            font-size: 12px;
+            color: #8E8E93;
+        }
+    </style>
+</head>
+<body>
+
+<h1 class="page-title">CalcaKids — App Store Screenshots</h1>
+<p class="page-sub">
+    iPhone 6.7" · 430 × 932 px logical (capture at 3× for full resolution)<br>
+    Open each screen in a new tab or use browser full-page capture
+</p>
+
+<div class="grid">
+
+    <!-- ── SCREEN 1: HERO ── -->
+    <div class="screen-wrap">
+        <span class="label">1 — Hero</span>
+        <div class="screen s1">
+            <div class="s1-circle-tl"></div>
+            <div class="s1-circle-br"></div>
+
+            <div class="s1-icon">
+                <img src="../CalcaKids/Assets.xcassets/AppIcon.appiconset/317328af-2c73-4f0f-8cec-86c4fce422be.jpg" alt="CalcaKids icon">
+            </div>
+
+            <div class="s1-title">CalcaKids</div>
+            <div class="s1-tagline">Tracing light table<br>for kids</div>
+        </div>
+    </div>
+
+    <!-- ── SCREEN 2: LIGHT TABLE ── -->
+    <div class="screen-wrap">
+        <span class="label">2 — Light table</span>
+        <div class="screen s2">
+            <div class="s2-text">
+                <span class="s2-eyebrow">Light table</span>
+                <div class="s2-title">Turn your iPad<br>into a light table</div>
+                <div class="s2-sub">Place paper on screen<br>and trace any image</div>
+            </div>
+
+            <div class="phone">
+                <div class="phone-screen">
+                    <div class="app-image">
+                        <!-- House outline tracing template -->
+                        <svg class="glow-image" viewBox="0 0 160 150" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:155px;height:145px">
+                            <!-- Roof -->
+                            <polyline points="18,75 80,18 142,75" stroke="#1C1C1E" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
+                            <!-- Chimney -->
+                            <rect x="108" y="28" width="14" height="26" rx="2" stroke="#1C1C1E" stroke-width="3.5" fill="none"/>
+                            <!-- House body -->
+                            <rect x="28" y="73" width="104" height="66" rx="3" stroke="#1C1C1E" stroke-width="4" fill="none"/>
+                            <!-- Door -->
+                            <rect x="66" y="101" width="28" height="38" rx="3" stroke="#1C1C1E" stroke-width="3.5" fill="none"/>
+                            <!-- Door knob -->
+                            <circle cx="89" cy="121" r="2.5" fill="#1C1C1E"/>
+                            <!-- Left window -->
+                            <rect x="38" y="88" width="22" height="20" rx="2" stroke="#1C1C1E" stroke-width="3" fill="none"/>
+                            <line x1="49" y1="88" x2="49" y2="108" stroke="#1C1C1E" stroke-width="2"/>
+                            <line x1="38" y1="98" x2="60" y2="98" stroke="#1C1C1E" stroke-width="2"/>
+                            <!-- Right window -->
+                            <rect x="100" y="88" width="22" height="20" rx="2" stroke="#1C1C1E" stroke-width="3" fill="none"/>
+                            <line x1="111" y1="88" x2="111" y2="108" stroke="#1C1C1E" stroke-width="2"/>
+                            <line x1="100" y1="98" x2="122" y2="98" stroke="#1C1C1E" stroke-width="2"/>
+                        </svg>
+
+                        <div class="app-buttons">
+                            <div class="app-btn">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="#3CB0E1">
+                                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                                </svg>
+                            </div>
+                            <div class="app-btn">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="#3CB0E1">
+                                    <path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/>
+                                </svg>
+                            </div>
+                            <div class="app-btn">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="#3CB0E1">
+                                    <path d="M12 5V1L7 6l5 5V7c3.31 0 6 2.69 6 6s-2.69 6-6 6-6-2.69-6-6H4c0 4.42 3.58 8 8 8s8-3.58 8-8-3.58-8-8-8z"/>
+                                </svg>
+                            </div>
+                            <div class="app-btn">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="#3CB0E1">
+                                    <path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ── SCREEN 3: LOCK ── -->
+    <div class="screen-wrap">
+        <span class="label">3 — Lock to trace</span>
+        <div class="screen s3">
+            <div class="s3-circle-tl"></div>
+            <div class="s3-circle-br"></div>
+
+            <div class="s3-text">
+                <span class="s3-eyebrow">Hands-free tracing</span>
+                <div class="s3-title">Lock the screen<br>to start tracing</div>
+                <div class="s3-sub">The image stays perfectly still<br>while your child traces</div>
+            </div>
+
+            <div class="phone">
+                <div class="phone-screen" style="background:#fff; position:relative; overflow:hidden;">
+
+                    <!-- Layer 1: casa en la pantalla (mesa de luz, se ve a través del papel) -->
+                    <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;">
+                        <svg viewBox="0 0 160 150" fill="none" style="width:155px;height:145px;opacity:0.22">
+                            <polyline points="18,75 80,18 142,75" stroke="#1C1C1E" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
+                            <rect x="108" y="28" width="14" height="26" rx="2" stroke="#1C1C1E" stroke-width="3.5" fill="none"/>
+                            <rect x="28" y="73" width="104" height="66" rx="3" stroke="#1C1C1E" stroke-width="4" fill="none"/>
+                            <rect x="66" y="101" width="28" height="38" rx="3" stroke="#1C1C1E" stroke-width="3.5" fill="none"/>
+                            <circle cx="89" cy="121" r="2.5" fill="#1C1C1E"/>
+                            <rect x="38" y="88" width="22" height="20" rx="2" stroke="#1C1C1E" stroke-width="3" fill="none"/>
+                            <line x1="49" y1="88" x2="49" y2="108" stroke="#1C1C1E" stroke-width="2"/>
+                            <line x1="38" y1="98" x2="60" y2="98" stroke="#1C1C1E" stroke-width="2"/>
+                            <rect x="100" y="88" width="22" height="20" rx="2" stroke="#1C1C1E" stroke-width="3" fill="none"/>
+                            <line x1="111" y1="88" x2="111" y2="108" stroke="#1C1C1E" stroke-width="2"/>
+                            <line x1="100" y1="98" x2="122" y2="98" stroke="#1C1C1E" stroke-width="2"/>
+                        </svg>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Folio de calca: fuera del phone, centrado sobre él -->
+            <!-- Phone center en s3: x=110+105=215, y=432+210=642 -->
+            <div style="position:absolute; top:642px; left:215px; width:290px; height:520px; background:rgba(255,249,200,0.82); transform:translate(-50%,-50%) rotate(7deg); box-shadow:3px 3px 16px rgba(0,0,0,0.18); z-index:10;"></div>
+
+            <!-- Trazado a lápiz: encima del papel, alineado con la casa del phone -->
+            <div style="position:absolute; top:642px; left:215px; transform:translate(-50%,-50%); z-index:11;">
+                <svg viewBox="0 0 160 150" fill="none" style="width:155px;height:145px;">
+                    <polyline points="18,75 80,18 142,75" stroke="#444" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+                    <polyline points="108,54 108,28 122,28" stroke="#444" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+
+            <!-- Lápiz físico: dentro del screen (no recortado por el phone) -->
+            <!-- Chimenea top-right en coords s3: x≈256, y≈597 -->
+            <!-- Punta = bottom-center del SVG → left=256-18=238, top=597-220=377 -->
+            <!-- rotate(40deg): goma sube a (256+141,597-168)=(397,429) → dentro del frame -->
+            <div style="position:absolute; left:238px; top:377px; transform:rotate(40deg); transform-origin:bottom center; z-index:20;">
+                <svg viewBox="0 0 36 220" width="36" height="220" fill="none">
+                    <!-- Goma -->
+                    <rect x="4" y="0" width="28" height="22" rx="4" fill="#FFB3B3"/>
+                    <!-- Virola -->
+                    <rect x="3" y="22" width="30" height="10" fill="#BBBBBB"/>
+                    <!-- Cuerpo -->
+                    <rect x="3" y="32" width="30" height="122" fill="#FFD95E"/>
+                    <!-- Franja lateral -->
+                    <rect x="3" y="32" width="7" height="122" fill="#E0B830"/>
+                    <!-- Madera: cono exterior, apex en (18,219) -->
+                    <path d="M3,154 L33,154 L18,219" fill="#C49A3A"/>
+                    <!-- Mina: cono interior, mismo apex (18,219), misma pendiente -->
+                    <!-- Altura total cono: 65px, base mina a 34px del apex → ancho=34*(15/65)*2≈16px -->
+                    <polygon points="10,185 26,185 18,219" fill="#555"/>
+                </svg>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- ── SCREEN 4: LANGUAGES ── -->
+    <div class="screen-wrap">
+        <span class="label">4 — Languages</span>
+        <div class="screen s4">
+            <div class="s4-icon">
+                <!-- Globe icon -->
+                <svg width="44" height="44" viewBox="0 0 24 24" fill="#1C1C1E">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+                </svg>
+            </div>
+
+            <div class="s4-title">Available in<br>8 languages</div>
+            <div class="s4-sub">CalcaKids speaks your language</div>
+
+            <div class="lang-grid">
+                <div class="lang-pill">
+                    <span class="lang-flag">🇪🇸</span>
+                    <div>
+                        <div class="lang-name">Spanish</div>
+                        <div class="lang-native">Español</div>
+                    </div>
+                </div>
+                <div class="lang-pill">
+                    <span class="lang-flag">🇬🇧</span>
+                    <div>
+                        <div class="lang-name">English</div>
+                        <div class="lang-native">English</div>
+                    </div>
+                </div>
+                <div class="lang-pill">
+                    <span class="lang-flag">🇫🇷</span>
+                    <div>
+                        <div class="lang-name">French</div>
+                        <div class="lang-native">Français</div>
+                    </div>
+                </div>
+                <div class="lang-pill">
+                    <span class="lang-flag">🇩🇪</span>
+                    <div>
+                        <div class="lang-name">German</div>
+                        <div class="lang-native">Deutsch</div>
+                    </div>
+                </div>
+                <div class="lang-pill">
+                    <span class="lang-flag">🇮🇹</span>
+                    <div>
+                        <div class="lang-name">Italian</div>
+                        <div class="lang-native">Italiano</div>
+                    </div>
+                </div>
+                <div class="lang-pill">
+                    <span class="lang-flag">🇵🇹</span>
+                    <div>
+                        <div class="lang-name">Portuguese</div>
+                        <div class="lang-native">Português</div>
+                    </div>
+                </div>
+                <div class="lang-pill">
+                    <span class="lang-flag">🇸🇦</span>
+                    <div>
+                        <div class="lang-name">Arabic</div>
+                        <div class="lang-native">العربية</div>
+                    </div>
+                </div>
+                <div class="lang-pill">
+                    <span class="lang-flag">🇨🇳</span>
+                    <div>
+                        <div class="lang-name">Chinese</div>
+                        <div class="lang-native">中文</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>
