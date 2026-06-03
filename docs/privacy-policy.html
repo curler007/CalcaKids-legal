@@ -62,34 +62,44 @@
 <div id="en">
 <p class="lang-label">English</p>
 <h1>Privacy Policy</h1>
-<p class="updated">Last updated: March 2026</p>
+<p class="updated">Last updated: June 2026</p>
 <p>This privacy policy describes how the <strong>CalcaLight</strong> app (hereinafter "the app") handles user information. The app was developed by Raúl de Pablo with the purpose of turning an iPhone or iPad screen into a light table so that children can trace images onto paper.</p>
 <h2>1. Data stored by the app</h2>
 <p>The app stores only basic operational information on the device itself:</p>
 <ul>
     <li>The number of donations made through the app, in order to personalise the thank-you message.</li>
     <li>Usage preferences (for example, whether the app is being opened for the first time).</li>
+    <li>If you use the optional support chat (see section 7), an anonymous identifier and your draft messages are stored on the device.</li>
 </ul>
 <p>The app <strong>does not store any images</strong>. Photos are accessed directly from the user's library to be displayed on screen and are discarded when the app is closed.</p>
 <h2>2. Access to the photo library</h2>
 <p>The app allows users to select an image from the device's photo library to use as a tracing template. This access is performed through the system photo picker (PhotosUI), which does not grant the app general access to the library: the user explicitly chooses which image to share on each occasion.</p>
 <p>The selected image <strong>never leaves the device</strong> and is never sent to any server.</p>
 <h2>3. Where data is stored</h2>
-<p>All data is stored locally on the user's device using the standard system storage (UserDefaults). No proprietary servers or cloud services are used.</p>
+<p>The data described in section 1 is stored locally on the user's device using the standard system storage (UserDefaults). For the basic functioning of the app no proprietary servers or cloud services are used. Data sent through the optional support chat is processed by external infrastructure as described in section 7.</p>
 <h2>4. Use of data</h2>
-<p>Stored data is used solely for the functioning of the app: displaying the selected image as a light table and personalising the thank-you message after a donation. Data is never used for analytical, advertising, or commercial purposes.</p>
+<p>Stored data is used solely for the functioning of the app: displaying the selected image as a light table, personalising the thank-you message after a donation, and delivering support chat messages between user and developer. Data is never used for analytical, advertising, or commercial purposes.</p>
 <h2>5. Sharing data with third parties</h2>
-<p>The app <strong>does not share any data with third parties</strong>. No analytics, advertising, or tracking tools of any kind are integrated.</p>
+<p>The app <strong>does not share any data with third parties for analytics, advertising, or tracking purposes</strong>. No such tools are integrated. The optional support chat relies on Cloudflare (cloud infrastructure provider) to host the backend and on Telegram (messaging platform) to deliver messages to the developer; these providers act as processors for the operation of that feature.</p>
 <h2>6. In-app purchases</h2>
 <p>The app offers optional donations to support development. These transactions are managed entirely by Apple through the App Store. The developer only receives confirmation that a purchase has been completed, without access to any payment data or associated personal information.</p>
-<h2>7. Deleting data</h2>
-<p>Users can delete all data stored by the app by uninstalling it from their device. Upon reinstallation, the app will start fresh.</p>
-<h2>8. Children</h2>
-<p>CalcaLight is designed to be used by children under adult supervision. The app does not collect personal information from any user, regardless of age. In-app purchases require Apple authentication (Face ID, Touch ID, or passcode), so they remain under the control of the adult responsible for the device.</p>
-<h2>9. Changes to this policy</h2>
+<h2>7. Support chat</h2>
+<p>The app includes an optional in-app support chat that lets users contact the developer with questions, suggestions, or issues. When you send a message:</p>
+<ul>
+    <li>An anonymous identifier (UUID) generated on the device is sent together with the message text and, if you choose to provide it, an alias or first name.</li>
+    <li>The data is transmitted over HTTPS to a backend operated by the developer on Cloudflare Workers (database hosted in Western Europe) and forwarded to a private Telegram bot for the developer to read and reply.</li>
+    <li>No account, email, or phone number is required. No tracking identifiers, IP-based profiling, advertising IDs, or analytics are collected.</li>
+    <li>Messages are retained for a maximum of <strong>90 days</strong> from receipt and are then automatically deleted from the backend and (on a best-effort basis) from the Telegram bot. You may request earlier deletion at any time by writing to the contact address in section 11.</li>
+</ul>
+<h2>8. Deleting data</h2>
+<p>Local data: users can delete all data stored by the app on the device by uninstalling it. Upon reinstallation, the app will start fresh, including a new support chat identifier.</p>
+<p>Support chat data: messages are auto-deleted after 90 days as described in section 7. Earlier deletion can be requested via the contact address.</p>
+<h2>9. Children</h2>
+<p>CalcaLight is designed to be used by children under adult supervision. The app does not collect personal information from any user. The optional support chat requires the user (typically an adult) to voluntarily type a message; it is not intended for unsupervised use by children. In-app purchases require Apple authentication (Face ID, Touch ID, or passcode), so they remain under the control of the adult responsible for the device.</p>
+<h2>10. Changes to this policy</h2>
 <p>This policy may be updated occasionally. The date of the last update appears at the top of this document. Continued use of the app after any change implies acceptance of the new version.</p>
-<h2>10. Contact</h2>
-<p>For any privacy-related enquiries, please write to: <a href="mailto:arenillas_argon.48@icloud.com">arenillas_argon.48@icloud.com</a></p>
+<h2>11. Contact</h2>
+<p>For any privacy-related enquiries, including data deletion requests, please write to: <a href="mailto:arenillas_argon.48@icloud.com">arenillas_argon.48@icloud.com</a></p>
 </div>
 
 <hr>
@@ -98,34 +108,44 @@
 <div id="es">
 <p class="lang-label">Español</p>
 <h1>Política de privacidad</h1>
-<p class="updated">Última actualización: marzo de 2026</p>
+<p class="updated">Última actualización: junio de 2026</p>
 <p>Esta política de privacidad describe cómo la aplicación <strong>CalcaLight</strong> (en adelante, "la app") trata la información del usuario. La app ha sido desarrollada por Raúl de Pablo con el propósito de convertir la pantalla del iPhone o iPad en una mesa de luz para que los niños puedan calcar imágenes sobre papel.</p>
 <h2>1. Datos que la app almacena</h2>
 <p>La app guarda exclusivamente información de funcionamiento básico en el propio dispositivo:</p>
 <ul>
     <li>El número de donaciones realizadas a través de la app, para personalizar el mensaje de agradecimiento.</li>
     <li>Preferencias de uso (por ejemplo, si es la primera vez que se abre la app).</li>
+    <li>Si usas el chat de soporte opcional (ver sección 7), se almacenan en el dispositivo un identificador anónimo y los borradores de tus mensajes.</li>
 </ul>
 <p>La app <strong>no almacena ninguna imagen</strong>. Las fotos se acceden directamente desde la galería del usuario para mostrarlas en pantalla y se descartan al cerrar la app.</p>
 <h2>2. Acceso a la galería de fotos</h2>
 <p>La app permite seleccionar una imagen de la galería del dispositivo para usarla como plantilla de calco. Este acceso se realiza a través del selector de fotos del sistema (PhotosUI), que no concede a la app acceso general a la galería: el usuario elige explícitamente qué imagen compartir en cada ocasión.</p>
 <p>La imagen seleccionada <strong>nunca abandona el dispositivo</strong> ni se envía a ningún servidor.</p>
 <h2>3. Dónde se almacenan los datos</h2>
-<p>Todos los datos se almacenan localmente en el dispositivo del usuario mediante el almacenamiento estándar del sistema (UserDefaults). No se utilizan servidores propios ni servicios en la nube.</p>
+<p>Los datos descritos en la sección 1 se almacenan localmente en el dispositivo del usuario mediante el almacenamiento estándar del sistema (UserDefaults). Para el funcionamiento básico de la app no se utilizan servidores propios ni servicios en la nube. Los datos enviados a través del chat de soporte opcional son procesados por infraestructura externa según se describe en la sección 7.</p>
 <h2>4. Uso de los datos</h2>
-<p>Los datos almacenados se utilizan exclusivamente para el funcionamiento de la app: mostrar la imagen seleccionada como mesa de luz y personalizar el agradecimiento tras una donación. En ningún caso se usan con fines analíticos, publicitarios o comerciales.</p>
+<p>Los datos almacenados se utilizan exclusivamente para el funcionamiento de la app: mostrar la imagen seleccionada como mesa de luz, personalizar el agradecimiento tras una donación y entregar los mensajes del chat de soporte entre usuario y desarrollador. En ningún caso se usan con fines analíticos, publicitarios o comerciales.</p>
 <h2>5. Compartición de datos con terceros</h2>
-<p>La app <strong>no comparte ningún dato con terceros</strong>. No se integran herramientas de analítica, publicidad ni seguimiento de ningún tipo.</p>
+<p>La app <strong>no comparte ningún dato con terceros con fines analíticos, publicitarios o de seguimiento</strong>. No se integran herramientas de ese tipo. El chat de soporte opcional se apoya en Cloudflare (proveedor de infraestructura cloud) para alojar el backend y en Telegram (plataforma de mensajería) para hacer llegar los mensajes al desarrollador; estos proveedores actúan como encargados del tratamiento para la operación de esa funcionalidad.</p>
 <h2>6. Compras dentro de la app</h2>
 <p>La app ofrece donaciones opcionales para apoyar el desarrollo. Estas transacciones son gestionadas íntegramente por Apple a través de la App Store. El desarrollador únicamente recibe la confirmación de que se ha completado una compra, sin acceso a ningún dato de pago ni información personal asociada.</p>
-<h2>7. Eliminación de datos</h2>
-<p>El usuario puede eliminar todos los datos almacenados por la app desinstalándola del dispositivo. Al reinstalarla, la app comenzará desde cero.</p>
-<h2>8. Menores de edad</h2>
-<p>CalcaLight está diseñada para ser usada por niños bajo la supervisión de un adulto. La app no recopila información personal de ningún usuario, independientemente de su edad. Las compras dentro de la app requieren autenticación de Apple (Face ID, Touch ID o contraseña), por lo que quedan bajo el control del adulto responsable del dispositivo.</p>
-<h2>9. Cambios en esta política</h2>
+<h2>7. Chat de soporte</h2>
+<p>La app incluye un chat de soporte opcional integrado que permite al usuario contactar con el desarrollador para dudas, sugerencias o incidencias. Cuando envías un mensaje:</p>
+<ul>
+    <li>Se envía un identificador anónimo (UUID) generado en el dispositivo junto con el texto del mensaje y, si decides aportarlo, un alias o nombre.</li>
+    <li>Los datos se transmiten por HTTPS a un backend operado por el desarrollador en Cloudflare Workers (base de datos alojada en Europa Occidental) y se reenvían a un bot privado de Telegram para que el desarrollador los lea y responda.</li>
+    <li>No se requiere cuenta, correo ni teléfono. No se recopilan identificadores de seguimiento, perfilado por IP, IDs publicitarios ni analíticas.</li>
+    <li>Los mensajes se conservan un máximo de <strong>90 días</strong> desde su recepción y a continuación se eliminan automáticamente del backend y (en la medida de lo posible) del bot de Telegram. Puedes solicitar el borrado anticipado en cualquier momento escribiendo a la dirección de contacto de la sección 11.</li>
+</ul>
+<h2>8. Eliminación de datos</h2>
+<p>Datos locales: el usuario puede eliminar todos los datos almacenados por la app en el dispositivo desinstalándola. Al reinstalarla, la app comenzará desde cero, incluido un nuevo identificador del chat de soporte.</p>
+<p>Datos del chat de soporte: los mensajes se eliminan automáticamente a los 90 días según se describe en la sección 7. Puede solicitarse el borrado anticipado en la dirección de contacto.</p>
+<h2>9. Menores de edad</h2>
+<p>CalcaLight está diseñada para ser usada por niños bajo la supervisión de un adulto. La app no recopila información personal de ningún usuario. El chat de soporte opcional requiere que el usuario (normalmente un adulto) escriba voluntariamente un mensaje; no está pensado para ser usado por niños sin supervisión. Las compras dentro de la app requieren autenticación de Apple (Face ID, Touch ID o contraseña), por lo que quedan bajo el control del adulto responsable del dispositivo.</p>
+<h2>10. Cambios en esta política</h2>
 <p>Esta política puede actualizarse ocasionalmente. La fecha de última actualización aparece al inicio del documento. El uso continuado de la app tras cualquier cambio implica la aceptación de la nueva versión.</p>
-<h2>10. Contacto</h2>
-<p>Para cualquier consulta sobre privacidad puedes escribir a: <a href="mailto:arenillas_argon.48@icloud.com">arenillas_argon.48@icloud.com</a></p>
+<h2>11. Contacto</h2>
+<p>Para cualquier consulta sobre privacidad, incluidas solicitudes de borrado de datos, puedes escribir a: <a href="mailto:arenillas_argon.48@icloud.com">arenillas_argon.48@icloud.com</a></p>
 </div>
 
 <hr>
@@ -134,34 +154,44 @@
 <div id="fr">
 <p class="lang-label">Français</p>
 <h1>Politique de confidentialité</h1>
-<p class="updated">Dernière mise à jour : mars 2026</p>
+<p class="updated">Dernière mise à jour : juin 2026</p>
 <p>Cette politique de confidentialité décrit comment l'application <strong>CalcaLight</strong> (ci-après « l'app ») traite les informations de l'utilisateur. L'app a été développée par Raúl de Pablo dans le but de transformer l'écran d'un iPhone ou d'un iPad en table lumineuse pour que les enfants puissent décalquer des images sur papier.</p>
 <h2>1. Données stockées par l'app</h2>
 <p>L'app stocke uniquement des informations de fonctionnement de base sur l'appareil lui-même :</p>
 <ul>
     <li>Le nombre de dons effectués via l'app, afin de personnaliser le message de remerciement.</li>
     <li>Les préférences d'utilisation (par exemple, si l'app est ouverte pour la première fois).</li>
+    <li>Si vous utilisez le chat de support optionnel (voir section 7), un identifiant anonyme et vos brouillons de messages sont stockés sur l'appareil.</li>
 </ul>
 <p>L'app <strong>ne stocke aucune image</strong>. Les photos sont accédées directement depuis la bibliothèque de l'utilisateur pour être affichées à l'écran et sont supprimées à la fermeture de l'app.</p>
 <h2>2. Accès à la bibliothèque de photos</h2>
 <p>L'app permet de sélectionner une image depuis la bibliothèque de l'appareil pour l'utiliser comme modèle de décalque. Cet accès est effectué via le sélecteur de photos du système (PhotosUI), qui ne donne pas à l'app un accès général à la bibliothèque : l'utilisateur choisit explicitement quelle image partager à chaque occasion.</p>
 <p>L'image sélectionnée <strong>ne quitte jamais l'appareil</strong> et n'est jamais envoyée à un serveur.</p>
 <h2>3. Où les données sont stockées</h2>
-<p>Toutes les données sont stockées localement sur l'appareil de l'utilisateur via le stockage standard du système (UserDefaults). Aucun serveur propriétaire ni service cloud n'est utilisé.</p>
+<p>Les données décrites à la section 1 sont stockées localement sur l'appareil de l'utilisateur via le stockage standard du système (UserDefaults). Pour le fonctionnement de base de l'app, aucun serveur propriétaire ni service cloud n'est utilisé. Les données envoyées via le chat de support optionnel sont traitées par une infrastructure externe décrite à la section 7.</p>
 <h2>4. Utilisation des données</h2>
-<p>Les données stockées sont utilisées uniquement pour le fonctionnement de l'app : afficher l'image sélectionnée comme table lumineuse et personnaliser le message de remerciement après un don. Les données ne sont jamais utilisées à des fins analytiques, publicitaires ou commerciales.</p>
+<p>Les données stockées sont utilisées uniquement pour le fonctionnement de l'app : afficher l'image sélectionnée comme table lumineuse, personnaliser le message de remerciement après un don et acheminer les messages du chat de support entre l'utilisateur et le développeur. Les données ne sont jamais utilisées à des fins analytiques, publicitaires ou commerciales.</p>
 <h2>5. Partage des données avec des tiers</h2>
-<p>L'app <strong>ne partage aucune donnée avec des tiers</strong>. Aucun outil d'analyse, de publicité ou de suivi n'est intégré.</p>
+<p>L'app <strong>ne partage aucune donnée avec des tiers à des fins d'analyse, de publicité ou de suivi</strong>. Aucun outil de ce type n'est intégré. Le chat de support optionnel s'appuie sur Cloudflare (fournisseur d'infrastructure cloud) pour héberger le backend et sur Telegram (plateforme de messagerie) pour acheminer les messages au développeur ; ces fournisseurs agissent en tant que sous-traitants pour le fonctionnement de cette fonctionnalité.</p>
 <h2>6. Achats intégrés</h2>
 <p>L'app propose des dons facultatifs pour soutenir le développement. Ces transactions sont entièrement gérées par Apple via l'App Store. Le développeur reçoit uniquement la confirmation qu'un achat a été effectué, sans accès aux données de paiement ni aux informations personnelles associées.</p>
-<h2>7. Suppression des données</h2>
-<p>Les utilisateurs peuvent supprimer toutes les données stockées par l'app en la désinstallant de leur appareil. Lors de la réinstallation, l'app repartira de zéro.</p>
-<h2>8. Enfants</h2>
-<p>CalcaLight est conçue pour être utilisée par des enfants sous la supervision d'un adulte. L'app ne collecte aucune information personnelle d'un utilisateur, quel que soit son âge. Les achats intégrés nécessitent une authentification Apple (Face ID, Touch ID ou code), et restent donc sous le contrôle de l'adulte responsable de l'appareil.</p>
-<h2>9. Modifications de cette politique</h2>
+<h2>7. Chat de support</h2>
+<p>L'app inclut un chat de support optionnel intégré qui permet à l'utilisateur de contacter le développeur pour des questions, suggestions ou problèmes. Lorsque vous envoyez un message :</p>
+<ul>
+    <li>Un identifiant anonyme (UUID) généré sur l'appareil est envoyé avec le texte du message et, si vous choisissez de le fournir, un alias ou prénom.</li>
+    <li>Les données sont transmises via HTTPS à un backend exploité par le développeur sur Cloudflare Workers (base de données hébergée en Europe occidentale) et transférées à un bot Telegram privé pour que le développeur les lise et y réponde.</li>
+    <li>Aucun compte, e-mail ou téléphone n'est requis. Aucun identifiant de suivi, profilage par IP, identifiant publicitaire ou analyse n'est collecté.</li>
+    <li>Les messages sont conservés au maximum <strong>90 jours</strong> à compter de leur réception, puis supprimés automatiquement du backend et (dans la mesure du possible) du bot Telegram. Vous pouvez demander une suppression anticipée à tout moment en écrivant à l'adresse de contact de la section 11.</li>
+</ul>
+<h2>8. Suppression des données</h2>
+<p>Données locales : les utilisateurs peuvent supprimer toutes les données stockées par l'app sur l'appareil en la désinstallant. Lors de la réinstallation, l'app repartira de zéro, y compris un nouvel identifiant de chat de support.</p>
+<p>Données du chat de support : les messages sont supprimés automatiquement après 90 jours comme décrit à la section 7. Une suppression anticipée peut être demandée à l'adresse de contact.</p>
+<h2>9. Enfants</h2>
+<p>CalcaLight est conçue pour être utilisée par des enfants sous la supervision d'un adulte. L'app ne collecte aucune information personnelle d'un utilisateur. Le chat de support optionnel exige que l'utilisateur (généralement un adulte) saisisse volontairement un message ; il n'est pas destiné à un usage non supervisé par des enfants. Les achats intégrés nécessitent une authentification Apple (Face ID, Touch ID ou code), et restent donc sous le contrôle de l'adulte responsable de l'appareil.</p>
+<h2>10. Modifications de cette politique</h2>
 <p>Cette politique peut être mise à jour occasionnellement. La date de la dernière mise à jour figure en haut de ce document. L'utilisation continue de l'app après toute modification implique l'acceptation de la nouvelle version.</p>
-<h2>10. Contact</h2>
-<p>Pour toute question relative à la confidentialité, veuillez écrire à : <a href="mailto:arenillas_argon.48@icloud.com">arenillas_argon.48@icloud.com</a></p>
+<h2>11. Contact</h2>
+<p>Pour toute question relative à la confidentialité, y compris les demandes de suppression de données, veuillez écrire à : <a href="mailto:arenillas_argon.48@icloud.com">arenillas_argon.48@icloud.com</a></p>
 </div>
 
 <hr>
@@ -170,34 +200,44 @@
 <div id="de">
 <p class="lang-label">Deutsch</p>
 <h1>Datenschutzerklärung</h1>
-<p class="updated">Letzte Aktualisierung: März 2026</p>
+<p class="updated">Letzte Aktualisierung: Juni 2026</p>
 <p>Diese Datenschutzerklärung beschreibt, wie die App <strong>CalcaLight</strong> (im Folgenden „die App") Benutzerinformationen verarbeitet. Die App wurde von Raúl de Pablo entwickelt, um den iPhone- oder iPad-Bildschirm in einen Leuchtkasten zu verwandeln, damit Kinder Bilder auf Papier abpausen können.</p>
 <h2>1. Von der App gespeicherte Daten</h2>
 <p>Die App speichert ausschließlich grundlegende Betriebsinformationen auf dem Gerät selbst:</p>
 <ul>
     <li>Die Anzahl der über die App getätigten Spenden, um die Dankesnachricht zu personalisieren.</li>
     <li>Nutzungseinstellungen (z. B. ob die App zum ersten Mal geöffnet wird).</li>
+    <li>Bei Nutzung des optionalen Support-Chats (siehe Abschnitt 7) werden ein anonymer Identifikator und Ihre Nachrichtenentwürfe lokal auf dem Gerät gespeichert.</li>
 </ul>
 <p>Die App <strong>speichert keine Bilder</strong>. Fotos werden direkt aus der Bibliothek des Benutzers abgerufen, um auf dem Bildschirm angezeigt zu werden, und beim Schließen der App verworfen.</p>
 <h2>2. Zugriff auf die Fotobibliothek</h2>
 <p>Die App ermöglicht es, ein Bild aus der Fotobibliothek des Geräts als Pausvorlage auszuwählen. Dieser Zugriff erfolgt über die systemeigene Fotoauswahl (PhotosUI), die der App keinen allgemeinen Zugriff auf die Bibliothek gewährt: Der Benutzer wählt bei jeder Gelegenheit explizit aus, welches Bild geteilt werden soll.</p>
 <p>Das ausgewählte Bild <strong>verlässt das Gerät niemals</strong> und wird nie an einen Server gesendet.</p>
 <h2>3. Speicherort der Daten</h2>
-<p>Alle Daten werden lokal auf dem Gerät des Benutzers über den standardmäßigen Systemspeicher (UserDefaults) gespeichert. Es werden keine eigenen Server oder Cloud-Dienste verwendet.</p>
+<p>Die in Abschnitt 1 beschriebenen Daten werden lokal auf dem Gerät des Benutzers über den standardmäßigen Systemspeicher (UserDefaults) gespeichert. Für den grundlegenden Betrieb der App werden keine eigenen Server oder Cloud-Dienste verwendet. Daten, die über den optionalen Support-Chat gesendet werden, werden von externer Infrastruktur verarbeitet, wie in Abschnitt 7 beschrieben.</p>
 <h2>4. Verwendung der Daten</h2>
-<p>Die gespeicherten Daten werden ausschließlich für den Betrieb der App verwendet: das ausgewählte Bild als Leuchtkasten anzuzeigen und die Dankesnachricht nach einer Spende zu personalisieren. Die Daten werden niemals für analytische, werbliche oder kommerzielle Zwecke verwendet.</p>
+<p>Die gespeicherten Daten werden ausschließlich für den Betrieb der App verwendet: das ausgewählte Bild als Leuchtkasten anzuzeigen, die Dankesnachricht nach einer Spende zu personalisieren und Support-Chat-Nachrichten zwischen Benutzer und Entwickler zu übermitteln. Die Daten werden niemals für analytische, werbliche oder kommerzielle Zwecke verwendet.</p>
 <h2>5. Datenweitergabe an Dritte</h2>
-<p>Die App <strong>gibt keine Daten an Dritte weiter</strong>. Es sind keinerlei Analyse-, Werbe- oder Tracking-Tools integriert.</p>
+<p>Die App <strong>gibt keine Daten an Dritte zu Analyse-, Werbe- oder Tracking-Zwecken weiter</strong>. Es sind keinerlei solche Tools integriert. Der optionale Support-Chat stützt sich auf Cloudflare (Anbieter von Cloud-Infrastruktur) zum Hosten des Backends und auf Telegram (Messaging-Plattform) zur Zustellung der Nachrichten an den Entwickler; diese Anbieter handeln als Auftragsverarbeiter für den Betrieb dieser Funktion.</p>
 <h2>6. In-App-Käufe</h2>
 <p>Die App bietet optionale Spenden zur Unterstützung der Entwicklung an. Diese Transaktionen werden vollständig von Apple über den App Store abgewickelt. Der Entwickler erhält lediglich die Bestätigung, dass ein Kauf abgeschlossen wurde, ohne Zugriff auf Zahlungsdaten oder zugehörige persönliche Informationen.</p>
-<h2>7. Löschen von Daten</h2>
-<p>Benutzer können alle von der App gespeicherten Daten löschen, indem sie die App von ihrem Gerät deinstallieren. Nach der Neuinstallation startet die App neu.</p>
-<h2>8. Kinder</h2>
-<p>CalcaLight ist für die Nutzung durch Kinder unter Aufsicht eines Erwachsenen konzipiert. Die App erfasst keine personenbezogenen Daten von Benutzern, unabhängig vom Alter. In-App-Käufe erfordern eine Apple-Authentifizierung (Face ID, Touch ID oder Passcode) und bleiben daher unter der Kontrolle des für das Gerät verantwortlichen Erwachsenen.</p>
-<h2>9. Änderungen dieser Richtlinie</h2>
+<h2>7. Support-Chat</h2>
+<p>Die App enthält einen optionalen In-App-Support-Chat, über den Benutzer den Entwickler bei Fragen, Anregungen oder Problemen kontaktieren können. Wenn Sie eine Nachricht senden:</p>
+<ul>
+    <li>Ein anonymer Identifikator (UUID), der auf dem Gerät generiert wird, wird zusammen mit dem Nachrichtentext und, falls Sie ihn angeben möchten, einem Alias oder Vornamen gesendet.</li>
+    <li>Die Daten werden per HTTPS an ein vom Entwickler betriebenes Backend bei Cloudflare Workers (Datenbank in Westeuropa gehostet) übertragen und an einen privaten Telegram-Bot weitergeleitet, damit der Entwickler sie lesen und beantworten kann.</li>
+    <li>Es ist kein Konto, keine E-Mail-Adresse und keine Telefonnummer erforderlich. Es werden keine Tracking-Identifikatoren, kein IP-basiertes Profiling, keine Werbe-IDs und keine Analysen erfasst.</li>
+    <li>Nachrichten werden maximal <strong>90 Tage</strong> nach Empfang aufbewahrt und anschließend automatisch aus dem Backend und (nach Möglichkeit) aus dem Telegram-Bot gelöscht. Sie können jederzeit eine vorzeitige Löschung anfordern, indem Sie an die Kontaktadresse in Abschnitt 11 schreiben.</li>
+</ul>
+<h2>8. Löschen von Daten</h2>
+<p>Lokale Daten: Benutzer können alle von der App auf dem Gerät gespeicherten Daten löschen, indem sie die App deinstallieren. Nach der Neuinstallation startet die App neu, einschließlich eines neuen Support-Chat-Identifikators.</p>
+<p>Support-Chat-Daten: Nachrichten werden nach 90 Tagen automatisch gelöscht, wie in Abschnitt 7 beschrieben. Eine vorzeitige Löschung kann über die Kontaktadresse angefordert werden.</p>
+<h2>9. Kinder</h2>
+<p>CalcaLight ist für die Nutzung durch Kinder unter Aufsicht eines Erwachsenen konzipiert. Die App erfasst keine personenbezogenen Daten von Benutzern. Der optionale Support-Chat erfordert, dass der Benutzer (in der Regel ein Erwachsener) freiwillig eine Nachricht eingibt; er ist nicht für die unbeaufsichtigte Nutzung durch Kinder vorgesehen. In-App-Käufe erfordern eine Apple-Authentifizierung (Face ID, Touch ID oder Passcode) und bleiben daher unter der Kontrolle des für das Gerät verantwortlichen Erwachsenen.</p>
+<h2>10. Änderungen dieser Richtlinie</h2>
 <p>Diese Richtlinie kann gelegentlich aktualisiert werden. Das Datum der letzten Aktualisierung erscheint am Anfang dieses Dokuments. Die weitere Nutzung der App nach einer Änderung gilt als Zustimmung zur neuen Version.</p>
-<h2>10. Kontakt</h2>
-<p>Bei datenschutzbezogenen Anfragen wenden Sie sich bitte an: <a href="mailto:arenillas_argon.48@icloud.com">arenillas_argon.48@icloud.com</a></p>
+<h2>11. Kontakt</h2>
+<p>Bei datenschutzbezogenen Anfragen, einschließlich Löschanforderungen, wenden Sie sich bitte an: <a href="mailto:arenillas_argon.48@icloud.com">arenillas_argon.48@icloud.com</a></p>
 </div>
 
 <hr>
@@ -206,34 +246,44 @@
 <div id="it">
 <p class="lang-label">Italiano</p>
 <h1>Informativa sulla privacy</h1>
-<p class="updated">Ultimo aggiornamento: marzo 2026</p>
+<p class="updated">Ultimo aggiornamento: giugno 2026</p>
 <p>Questa informativa sulla privacy descrive come l'app <strong>CalcaLight</strong> (di seguito "l'app") tratta le informazioni degli utenti. L'app è stata sviluppata da Raúl de Pablo con lo scopo di trasformare lo schermo di un iPhone o iPad in un tavolo luminoso per consentire ai bambini di ricalcare immagini su carta.</p>
 <h2>1. Dati memorizzati dall'app</h2>
 <p>L'app memorizza solo informazioni operative di base sul dispositivo stesso:</p>
 <ul>
     <li>Il numero di donazioni effettuate tramite l'app, per personalizzare il messaggio di ringraziamento.</li>
     <li>Preferenze d'uso (ad esempio, se l'app viene aperta per la prima volta).</li>
+    <li>Se si utilizza la chat di supporto opzionale (vedi sezione 7), un identificatore anonimo e le bozze dei tuoi messaggi vengono memorizzati sul dispositivo.</li>
 </ul>
 <p>L'app <strong>non memorizza alcuna immagine</strong>. Le foto vengono accedute direttamente dalla libreria dell'utente per essere visualizzate sullo schermo e vengono eliminate alla chiusura dell'app.</p>
 <h2>2. Accesso alla libreria foto</h2>
 <p>L'app consente di selezionare un'immagine dalla libreria foto del dispositivo da utilizzare come modello di ricalco. Questo accesso avviene tramite il selettore di foto di sistema (PhotosUI), che non concede all'app accesso generale alla libreria: l'utente sceglie esplicitamente quale immagine condividere in ogni occasione.</p>
 <p>L'immagine selezionata <strong>non lascia mai il dispositivo</strong> e non viene mai inviata ad alcun server.</p>
 <h2>3. Dove vengono memorizzati i dati</h2>
-<p>Tutti i dati sono memorizzati localmente sul dispositivo dell'utente tramite l'archiviazione standard del sistema (UserDefaults). Non vengono utilizzati server proprietari né servizi cloud.</p>
+<p>I dati descritti nella sezione 1 sono memorizzati localmente sul dispositivo dell'utente tramite l'archiviazione standard del sistema (UserDefaults). Per il funzionamento di base dell'app non vengono utilizzati server proprietari né servizi cloud. I dati inviati tramite la chat di supporto opzionale sono trattati da infrastruttura esterna come descritto nella sezione 7.</p>
 <h2>4. Utilizzo dei dati</h2>
-<p>I dati memorizzati vengono utilizzati esclusivamente per il funzionamento dell'app: visualizzare l'immagine selezionata come tavolo luminoso e personalizzare il messaggio di ringraziamento dopo una donazione. I dati non vengono mai utilizzati per scopi analitici, pubblicitari o commerciali.</p>
+<p>I dati memorizzati vengono utilizzati esclusivamente per il funzionamento dell'app: visualizzare l'immagine selezionata come tavolo luminoso, personalizzare il messaggio di ringraziamento dopo una donazione e recapitare i messaggi della chat di supporto tra utente e sviluppatore. I dati non vengono mai utilizzati per scopi analitici, pubblicitari o commerciali.</p>
 <h2>5. Condivisione dei dati con terze parti</h2>
-<p>L'app <strong>non condivide alcun dato con terze parti</strong>. Non sono integrati strumenti di analisi, pubblicità o tracciamento di alcun tipo.</p>
+<p>L'app <strong>non condivide alcun dato con terze parti per scopi analitici, pubblicitari o di tracciamento</strong>. Non sono integrati strumenti di questo tipo. La chat di supporto opzionale si appoggia a Cloudflare (fornitore di infrastruttura cloud) per ospitare il backend e a Telegram (piattaforma di messaggistica) per recapitare i messaggi allo sviluppatore; questi fornitori agiscono come responsabili del trattamento per il funzionamento di tale funzionalità.</p>
 <h2>6. Acquisti in-app</h2>
 <p>L'app offre donazioni facoltative per supportare lo sviluppo. Queste transazioni sono gestite interamente da Apple tramite l'App Store. Lo sviluppatore riceve solo la conferma che un acquisto è stato completato, senza accesso a dati di pagamento o informazioni personali associate.</p>
-<h2>7. Eliminazione dei dati</h2>
-<p>Gli utenti possono eliminare tutti i dati memorizzati dall'app disinstallandola dal dispositivo. Al momento della reinstallazione, l'app ripartirà da zero.</p>
-<h2>8. Minori</h2>
-<p>CalcaLight è progettata per essere utilizzata da bambini sotto la supervisione di un adulto. L'app non raccoglie informazioni personali da nessun utente, indipendentemente dall'età. Gli acquisti in-app richiedono l'autenticazione Apple (Face ID, Touch ID o codice), quindi rimangono sotto il controllo dell'adulto responsabile del dispositivo.</p>
-<h2>9. Modifiche a questa informativa</h2>
+<h2>7. Chat di supporto</h2>
+<p>L'app include una chat di supporto opzionale integrata che consente all'utente di contattare lo sviluppatore per domande, suggerimenti o problemi. Quando invii un messaggio:</p>
+<ul>
+    <li>Viene inviato un identificatore anonimo (UUID) generato sul dispositivo insieme al testo del messaggio e, se scegli di fornirlo, un alias o nome.</li>
+    <li>I dati sono trasmessi tramite HTTPS a un backend gestito dallo sviluppatore su Cloudflare Workers (database ospitato in Europa occidentale) e inoltrati a un bot Telegram privato perché lo sviluppatore li legga e risponda.</li>
+    <li>Non sono richiesti account, e-mail o telefono. Non vengono raccolti identificatori di tracciamento, profilazione tramite IP, ID pubblicitari o analisi.</li>
+    <li>I messaggi vengono conservati per un massimo di <strong>90 giorni</strong> dalla ricezione e poi eliminati automaticamente dal backend e (per quanto possibile) dal bot Telegram. Puoi richiedere l'eliminazione anticipata in qualsiasi momento scrivendo all'indirizzo di contatto nella sezione 11.</li>
+</ul>
+<h2>8. Eliminazione dei dati</h2>
+<p>Dati locali: gli utenti possono eliminare tutti i dati memorizzati dall'app sul dispositivo disinstallandola. Al momento della reinstallazione, l'app ripartirà da zero, incluso un nuovo identificatore della chat di supporto.</p>
+<p>Dati della chat di supporto: i messaggi vengono eliminati automaticamente dopo 90 giorni come descritto nella sezione 7. L'eliminazione anticipata può essere richiesta tramite l'indirizzo di contatto.</p>
+<h2>9. Minori</h2>
+<p>CalcaLight è progettata per essere utilizzata da bambini sotto la supervisione di un adulto. L'app non raccoglie informazioni personali da nessun utente. La chat di supporto opzionale richiede che l'utente (generalmente un adulto) digiti volontariamente un messaggio; non è destinata all'uso non supervisionato da parte di bambini. Gli acquisti in-app richiedono l'autenticazione Apple (Face ID, Touch ID o codice), quindi rimangono sotto il controllo dell'adulto responsabile del dispositivo.</p>
+<h2>10. Modifiche a questa informativa</h2>
 <p>Questa informativa può essere aggiornata occasionalmente. La data dell'ultimo aggiornamento appare in cima a questo documento. L'uso continuato dell'app dopo qualsiasi modifica implica l'accettazione della nuova versione.</p>
-<h2>10. Contatto</h2>
-<p>Per qualsiasi domanda relativa alla privacy, scrivere a: <a href="mailto:arenillas_argon.48@icloud.com">arenillas_argon.48@icloud.com</a></p>
+<h2>11. Contatto</h2>
+<p>Per qualsiasi domanda relativa alla privacy, incluse le richieste di eliminazione dei dati, scrivere a: <a href="mailto:arenillas_argon.48@icloud.com">arenillas_argon.48@icloud.com</a></p>
 </div>
 
 <hr>
@@ -242,34 +292,44 @@
 <div id="pt">
 <p class="lang-label">Português</p>
 <h1>Política de privacidade</h1>
-<p class="updated">Última atualização: março de 2026</p>
+<p class="updated">Última atualização: junho de 2026</p>
 <p>Esta política de privacidade descreve como a aplicação <strong>CalcaLight</strong> (doravante "a app") trata as informações do utilizador. A app foi desenvolvida por Raúl de Pablo com o objetivo de transformar o ecrã do iPhone ou iPad numa mesa de luz para que as crianças possam decalcar imagens em papel.</p>
 <h2>1. Dados armazenados pela app</h2>
 <p>A app armazena apenas informações operacionais básicas no próprio dispositivo:</p>
 <ul>
     <li>O número de doações feitas através da app, para personalizar a mensagem de agradecimento.</li>
     <li>Preferências de utilização (por exemplo, se a app está a ser aberta pela primeira vez).</li>
+    <li>Se utilizar o chat de suporte opcional (ver secção 7), são armazenados no dispositivo um identificador anónimo e os rascunhos das suas mensagens.</li>
 </ul>
 <p>A app <strong>não armazena nenhuma imagem</strong>. As fotos são acedidas diretamente da biblioteca do utilizador para serem exibidas no ecrã e são descartadas quando a app é fechada.</p>
 <h2>2. Acesso à biblioteca de fotos</h2>
 <p>A app permite selecionar uma imagem da biblioteca de fotos do dispositivo para usar como modelo de decalque. Este acesso é feito através do seletor de fotos do sistema (PhotosUI), que não concede à app acesso geral à biblioteca: o utilizador escolhe explicitamente qual imagem partilhar em cada ocasião.</p>
 <p>A imagem selecionada <strong>nunca sai do dispositivo</strong> e nunca é enviada para nenhum servidor.</p>
 <h2>3. Onde os dados são armazenados</h2>
-<p>Todos os dados são armazenados localmente no dispositivo do utilizador usando o armazenamento padrão do sistema (UserDefaults). Não são utilizados servidores próprios nem serviços na nuvem.</p>
+<p>Os dados descritos na secção 1 são armazenados localmente no dispositivo do utilizador usando o armazenamento padrão do sistema (UserDefaults). Para o funcionamento básico da app não são utilizados servidores próprios nem serviços na nuvem. Os dados enviados através do chat de suporte opcional são processados por infraestrutura externa, conforme descrito na secção 7.</p>
 <h2>4. Utilização dos dados</h2>
-<p>Os dados armazenados são utilizados exclusivamente para o funcionamento da app: exibir a imagem selecionada como mesa de luz e personalizar a mensagem de agradecimento após uma doação. Os dados nunca são utilizados para fins analíticos, publicitários ou comerciais.</p>
+<p>Os dados armazenados são utilizados exclusivamente para o funcionamento da app: exibir a imagem selecionada como mesa de luz, personalizar a mensagem de agradecimento após uma doação e entregar as mensagens do chat de suporte entre utilizador e programador. Os dados nunca são utilizados para fins analíticos, publicitários ou comerciais.</p>
 <h2>5. Partilha de dados com terceiros</h2>
-<p>A app <strong>não partilha nenhum dado com terceiros</strong>. Não estão integradas quaisquer ferramentas de análise, publicidade ou rastreamento.</p>
+<p>A app <strong>não partilha nenhum dado com terceiros para fins analíticos, publicitários ou de rastreamento</strong>. Não estão integradas quaisquer ferramentas deste tipo. O chat de suporte opcional apoia-se em Cloudflare (fornecedor de infraestrutura cloud) para alojar o backend e em Telegram (plataforma de mensagens) para entregar as mensagens ao programador; estes fornecedores atuam como subcontratantes para o funcionamento dessa funcionalidade.</p>
 <h2>6. Compras na app</h2>
 <p>A app oferece doações opcionais para apoiar o desenvolvimento. Estas transações são geridas inteiramente pela Apple através da App Store. O desenvolvedor recebe apenas a confirmação de que uma compra foi concluída, sem acesso a dados de pagamento ou informações pessoais associadas.</p>
-<h2>7. Eliminação de dados</h2>
-<p>Os utilizadores podem eliminar todos os dados armazenados pela app desinstalando-a do dispositivo. Após a reinstalação, a app começará do zero.</p>
-<h2>8. Menores</h2>
-<p>CalcaLight foi concebida para ser utilizada por crianças sob a supervisão de um adulto. A app não recolhe informações pessoais de nenhum utilizador, independentemente da idade. As compras na app requerem autenticação Apple (Face ID, Touch ID ou código), permanecendo assim sob o controlo do adulto responsável pelo dispositivo.</p>
-<h2>9. Alterações a esta política</h2>
+<h2>7. Chat de suporte</h2>
+<p>A app inclui um chat de suporte opcional integrado que permite ao utilizador contactar o programador para dúvidas, sugestões ou problemas. Quando envia uma mensagem:</p>
+<ul>
+    <li>É enviado um identificador anónimo (UUID) gerado no dispositivo juntamente com o texto da mensagem e, se optar por fornecê-lo, um alias ou nome.</li>
+    <li>Os dados são transmitidos por HTTPS para um backend operado pelo programador em Cloudflare Workers (base de dados alojada na Europa Ocidental) e reencaminhados para um bot privado de Telegram para que o programador os leia e responda.</li>
+    <li>Não é necessária conta, e-mail nem telefone. Não são recolhidos identificadores de rastreamento, perfilamento por IP, IDs publicitários nem análises.</li>
+    <li>As mensagens são conservadas por um máximo de <strong>90 dias</strong> desde a receção e depois eliminadas automaticamente do backend e (na medida do possível) do bot de Telegram. Pode solicitar a eliminação antecipada em qualquer momento escrevendo para o endereço de contacto da secção 11.</li>
+</ul>
+<h2>8. Eliminação de dados</h2>
+<p>Dados locais: o utilizador pode eliminar todos os dados armazenados pela app no dispositivo desinstalando-a. Após a reinstalação, a app começará do zero, incluindo um novo identificador do chat de suporte.</p>
+<p>Dados do chat de suporte: as mensagens são eliminadas automaticamente após 90 dias conforme descrito na secção 7. A eliminação antecipada pode ser solicitada através do endereço de contacto.</p>
+<h2>9. Menores</h2>
+<p>CalcaLight foi concebida para ser utilizada por crianças sob a supervisão de um adulto. A app não recolhe informações pessoais de nenhum utilizador. O chat de suporte opcional requer que o utilizador (normalmente um adulto) escreva voluntariamente uma mensagem; não se destina à utilização não supervisionada por crianças. As compras na app requerem autenticação Apple (Face ID, Touch ID ou código), permanecendo assim sob o controlo do adulto responsável pelo dispositivo.</p>
+<h2>10. Alterações a esta política</h2>
 <p>Esta política pode ser atualizada ocasionalmente. A data da última atualização aparece no topo deste documento. A utilização continuada da app após qualquer alteração implica a aceitação da nova versão.</p>
-<h2>10. Contacto</h2>
-<p>Para qualquer questão relacionada com a privacidade, escreva para: <a href="mailto:arenillas_argon.48@icloud.com">arenillas_argon.48@icloud.com</a></p>
+<h2>11. Contacto</h2>
+<p>Para qualquer questão relacionada com a privacidade, incluindo pedidos de eliminação de dados, escreva para: <a href="mailto:arenillas_argon.48@icloud.com">arenillas_argon.48@icloud.com</a></p>
 </div>
 
 <hr>
@@ -278,34 +338,44 @@
 <div id="ar" dir="rtl">
 <p class="lang-label" style="text-align:right">العربية</p>
 <h1>سياسة الخصوصية</h1>
-<p class="updated">آخر تحديث: مارس 2026</p>
+<p class="updated">آخر تحديث: يونيو 2026</p>
 <p>تصف سياسة الخصوصية هذه كيفية تعامل تطبيق <strong>CalcaLight</strong> (المشار إليه فيما بعد بـ"التطبيق") مع معلومات المستخدم. طوّر التطبيق راؤول دي بابلو بهدف تحويل شاشة iPhone أو iPad إلى طاولة ضوء تتيح للأطفال نسخ الصور على الورق.</p>
 <h2>١. البيانات التي يخزنها التطبيق</h2>
 <p>يخزّن التطبيق فقط معلومات تشغيلية أساسية على الجهاز نفسه:</p>
 <ul>
     <li>عدد التبرعات التي تمت عبر التطبيق، لتخصيص رسالة الشكر.</li>
     <li>تفضيلات الاستخدام (مثلاً، ما إذا كان التطبيق يُفتح لأول مرة).</li>
+    <li>عند استخدام دردشة الدعم الاختيارية (انظر القسم ٧)، يُخزَّن على الجهاز معرّف مجهول الهوية ومسودات رسائلك.</li>
 </ul>
 <p>التطبيق <strong>لا يخزّن أي صور</strong>. يتم الوصول إلى الصور مباشرةً من مكتبة المستخدم لعرضها على الشاشة، وتُحذف عند إغلاق التطبيق.</p>
 <h2>٢. الوصول إلى مكتبة الصور</h2>
 <p>يتيح التطبيق للمستخدمين اختيار صورة من مكتبة صور الجهاز لاستخدامها كنموذج للنسخ. يتم هذا الوصول عبر أداة اختيار الصور في النظام (PhotosUI)، التي لا تمنح التطبيق وصولاً عاماً إلى المكتبة: يختار المستخدم صراحةً الصورة التي يرغب في مشاركتها في كل مرة.</p>
 <p>الصورة المختارة <strong>لا تغادر الجهاز أبداً</strong> ولا تُرسل إلى أي خادم.</p>
 <h2>٣. مكان تخزين البيانات</h2>
-<p>تُخزَّن جميع البيانات محلياً على جهاز المستخدم باستخدام وحدة التخزين القياسية للنظام (UserDefaults). لا تُستخدم أي خوادم خاصة أو خدمات سحابية.</p>
+<p>تُخزَّن البيانات الموصوفة في القسم ١ محلياً على جهاز المستخدم باستخدام وحدة التخزين القياسية للنظام (UserDefaults). للتشغيل الأساسي للتطبيق لا تُستخدم أي خوادم خاصة أو خدمات سحابية. البيانات المُرسَلة عبر دردشة الدعم الاختيارية تُعالَج بواسطة بنية تحتية خارجية كما هو موضح في القسم ٧.</p>
 <h2>٤. استخدام البيانات</h2>
-<p>تُستخدم البيانات المخزّنة حصراً لتشغيل التطبيق: عرض الصورة المختارة كطاولة ضوء وتخصيص رسالة الشكر بعد التبرع. لا تُستخدم البيانات أبداً لأغراض تحليلية أو إعلانية أو تجارية.</p>
+<p>تُستخدم البيانات المخزّنة حصراً لتشغيل التطبيق: عرض الصورة المختارة كطاولة ضوء، وتخصيص رسالة الشكر بعد التبرع، وتوصيل رسائل دردشة الدعم بين المستخدم والمطوّر. لا تُستخدم البيانات أبداً لأغراض تحليلية أو إعلانية أو تجارية.</p>
 <h2>٥. مشاركة البيانات مع أطراف ثالثة</h2>
-<p>التطبيق <strong>لا يشارك أي بيانات مع أطراف ثالثة</strong>. لا تتضمن التطبيق أي أدوات تحليل أو إعلانات أو تتبع من أي نوع.</p>
+<p>التطبيق <strong>لا يشارك أي بيانات مع أطراف ثالثة لأغراض التحليل أو الإعلان أو التتبع</strong>. لا تُدمج أي أدوات من هذا النوع. تعتمد دردشة الدعم الاختيارية على Cloudflare (مزوّد بنية تحتية سحابية) لاستضافة الواجهة الخلفية وعلى Telegram (منصة مراسلة) لإيصال الرسائل إلى المطوّر؛ يعمل هؤلاء المزوّدون كمعالجين لتشغيل هذه الميزة.</p>
 <h2>٦. المشتريات داخل التطبيق</h2>
 <p>يقدّم التطبيق تبرعات اختيارية لدعم التطوير. تُدار هذه المعاملات بالكامل من قِبل Apple عبر App Store. لا يتلقى المطوّر سوى تأكيد إتمام عملية الشراء، دون الوصول إلى أي بيانات دفع أو معلومات شخصية مرتبطة بها.</p>
-<h2>٧. حذف البيانات</h2>
-<p>يمكن للمستخدمين حذف جميع البيانات المخزّنة بواسطة التطبيق عبر إلغاء تثبيته من الجهاز. عند إعادة التثبيت، سيبدأ التطبيق من جديد.</p>
-<h2>٨. الأطفال</h2>
-<p>صُمِّم CalcaLight للاستخدام من قِبل الأطفال تحت إشراف البالغين. لا يجمع التطبيق معلومات شخصية من أي مستخدم بصرف النظر عن العمر. تتطلب المشتريات داخل التطبيق مصادقة Apple (Face ID أو Touch ID أو رمز المرور)، مما يبقيها تحت سيطرة البالغ المسؤول عن الجهاز.</p>
-<h2>٩. التغييرات على هذه السياسة</h2>
+<h2>٧. دردشة الدعم</h2>
+<p>يتضمن التطبيق دردشة دعم اختيارية مدمجة تتيح للمستخدم التواصل مع المطوّر لطرح الأسئلة أو الاقتراحات أو الإبلاغ عن المشاكل. عند إرسال رسالة:</p>
+<ul>
+    <li>يُرسَل معرّف مجهول الهوية (UUID) مُولَّد على الجهاز مع نص الرسالة، وإذا اخترت تقديمه، اسم مستعار أو اسم.</li>
+    <li>تُنقل البيانات عبر HTTPS إلى واجهة خلفية يديرها المطوّر على Cloudflare Workers (قاعدة البيانات مستضافة في أوروبا الغربية) وتُحوَّل إلى بوت Telegram خاص ليقرأها المطوّر ويرد عليها.</li>
+    <li>لا يُطلب حساب أو بريد إلكتروني أو هاتف. لا تُجمع معرّفات تتبع أو ملفات تعريف مستندة إلى عنوان IP أو معرّفات إعلانية أو أي تحليلات.</li>
+    <li>تُحفَظ الرسائل لمدة أقصاها <strong>٩٠ يوماً</strong> من تاريخ استلامها ثم تُحذف تلقائياً من الواجهة الخلفية و(بقدر الإمكان) من بوت Telegram. يمكنك طلب الحذف المبكر في أي وقت بالكتابة إلى عنوان الاتصال في القسم ١١.</li>
+</ul>
+<h2>٨. حذف البيانات</h2>
+<p>البيانات المحلية: يمكن للمستخدمين حذف جميع البيانات المخزّنة بواسطة التطبيق على الجهاز عبر إلغاء تثبيته. عند إعادة التثبيت، سيبدأ التطبيق من جديد، بما في ذلك معرّف جديد لدردشة الدعم.</p>
+<p>بيانات دردشة الدعم: تُحذف الرسائل تلقائياً بعد ٩٠ يوماً كما هو موضح في القسم ٧. يمكن طلب الحذف المبكر عبر عنوان الاتصال.</p>
+<h2>٩. الأطفال</h2>
+<p>صُمِّم CalcaLight للاستخدام من قِبل الأطفال تحت إشراف البالغين. لا يجمع التطبيق معلومات شخصية من أي مستخدم. تتطلب دردشة الدعم الاختيارية أن يكتب المستخدم (عادةً بالغ) رسالة طوعاً؛ وهي ليست مخصصة للاستخدام من قبل الأطفال دون إشراف. تتطلب المشتريات داخل التطبيق مصادقة Apple (Face ID أو Touch ID أو رمز المرور)، مما يبقيها تحت سيطرة البالغ المسؤول عن الجهاز.</p>
+<h2>١٠. التغييرات على هذه السياسة</h2>
 <p>قد تُحدَّث هذه السياسة من وقت لآخر. يظهر تاريخ آخر تحديث في أعلى هذا المستند. استمرار استخدام التطبيق بعد أي تغيير يعني القبول بالنسخة الجديدة.</p>
-<h2>١٠. التواصل</h2>
-<p>لأي استفسارات تتعلق بالخصوصية، يرجى الكتابة إلى: <a href="mailto:arenillas_argon.48@icloud.com">arenillas_argon.48@icloud.com</a></p>
+<h2>١١. التواصل</h2>
+<p>لأي استفسارات تتعلق بالخصوصية، بما في ذلك طلبات حذف البيانات، يرجى الكتابة إلى: <a href="mailto:arenillas_argon.48@icloud.com">arenillas_argon.48@icloud.com</a></p>
 </div>
 
 <hr>
@@ -314,34 +384,44 @@
 <div id="zh">
 <p class="lang-label">中文（简体）</p>
 <h1>隐私政策</h1>
-<p class="updated">最后更新：2026年3月</p>
+<p class="updated">最后更新：2026年6月</p>
 <p>本隐私政策描述了 <strong>CalcaLight</strong> 应用程序（以下简称"本应用"）如何处理用户信息。本应用由 Raúl de Pablo 开发，旨在将 iPhone 或 iPad 屏幕变成描图灯箱，让儿童可以在纸上描绘图像。</p>
 <h2>一、应用存储的数据</h2>
 <p>本应用仅在设备本地存储基本运行信息：</p>
 <ul>
     <li>通过应用完成的捐赠次数，用于个性化感谢信息。</li>
     <li>使用偏好设置（例如，是否首次打开应用）。</li>
+    <li>如果使用可选的支持聊天功能（参见第七节），将在设备上存储一个匿名标识符及您的消息草稿。</li>
 </ul>
 <p>本应用<strong>不存储任何图像</strong>。照片直接从用户的相册中读取并显示在屏幕上，关闭应用后即被丢弃。</p>
 <h2>二、访问相册</h2>
 <p>本应用允许用户从设备相册中选择图像作为描图模板。此访问通过系统照片选择器（PhotosUI）进行，不会向应用授予对相册的一般访问权限：用户每次都明确选择要共享的图像。</p>
 <p>所选图像<strong>永远不会离开设备</strong>，也不会发送到任何服务器。</p>
 <h2>三、数据存储位置</h2>
-<p>所有数据均使用标准系统存储（UserDefaults）在用户设备本地存储。不使用任何专有服务器或云服务。</p>
+<p>第一节所述的数据使用标准系统存储（UserDefaults）在用户设备本地存储。对于应用的基本功能，不使用任何专有服务器或云服务。通过可选的支持聊天功能发送的数据由外部基础设施处理，详见第七节。</p>
 <h2>四、数据使用</h2>
-<p>存储的数据仅用于应用运行：将所选图像显示为描图灯箱，以及在捐赠后个性化感谢信息。数据绝不用于分析、广告或商业目的。</p>
+<p>存储的数据仅用于应用运行：将所选图像显示为描图灯箱、在捐赠后个性化感谢信息，以及在用户与开发者之间传递支持聊天消息。数据绝不用于分析、广告或商业目的。</p>
 <h2>五、与第三方共享数据</h2>
-<p>本应用<strong>不与任何第三方共享数据</strong>。未集成任何分析、广告或跟踪工具。</p>
+<p>本应用<strong>不与任何第三方共享数据用于分析、广告或追踪目的</strong>。未集成任何此类工具。可选的支持聊天功能依赖 Cloudflare（云基础设施提供商）托管后端，以及 Telegram（消息平台）将消息传递给开发者；这些提供商作为受托方处理该功能的运行。</p>
 <h2>六、应用内购买</h2>
 <p>本应用提供可选捐赠以支持开发。这些交易完全由 Apple 通过 App Store 管理。开发者仅收到购买完成的确认，无法访问任何支付数据或相关个人信息。</p>
-<h2>七、删除数据</h2>
-<p>用户可以通过从设备卸载应用来删除应用存储的所有数据。重新安装后，应用将重新开始。</p>
-<h2>八、儿童</h2>
-<p>CalcaLight 专为在成人监督下供儿童使用而设计。无论年龄如何，本应用不收集任何用户的个人信息。应用内购买需要 Apple 身份验证（Face ID、Touch ID 或密码），因此由负责设备的成人控制。</p>
-<h2>九、本政策的变更</h2>
+<h2>七、支持聊天</h2>
+<p>本应用包含一个可选的内置支持聊天功能，允许用户就问题、建议或反馈联系开发者。当您发送消息时：</p>
+<ul>
+    <li>设备生成的匿名标识符（UUID）将连同消息文本一起发送，如果您选择提供，还会包含别名或姓名。</li>
+    <li>数据通过 HTTPS 传输至开发者运营的 Cloudflare Workers 后端（数据库托管于西欧），并转发至私有 Telegram 机器人供开发者阅读和回复。</li>
+    <li>无需账户、电子邮件或电话。不会收集追踪标识符、基于 IP 的画像、广告 ID 或任何分析数据。</li>
+    <li>消息自收到之日起最多保留 <strong>90 天</strong>，之后将从后端自动删除（并尽力从 Telegram 机器人中删除）。您可以随时通过第十一节中的联系地址申请提前删除。</li>
+</ul>
+<h2>八、删除数据</h2>
+<p>本地数据：用户可以通过从设备卸载应用来删除应用在设备上存储的所有数据。重新安装后，应用将重新开始，包括新的支持聊天标识符。</p>
+<p>支持聊天数据：消息将按第七节所述在 90 天后自动删除。可通过联系地址申请提前删除。</p>
+<h2>九、儿童</h2>
+<p>CalcaLight 专为在成人监督下供儿童使用而设计。本应用不收集任何用户的个人信息。可选的支持聊天功能要求用户（通常是成人）自愿输入消息；不适合儿童在无人监督下使用。应用内购买需要 Apple 身份验证（Face ID、Touch ID 或密码），因此由负责设备的成人控制。</p>
+<h2>十、本政策的变更</h2>
 <p>本政策可能偶尔更新。最后更新日期显示在本文件顶部。任何变更后继续使用本应用即表示接受新版本。</p>
-<h2>十、联系方式</h2>
-<p>如有任何隐私相关问题，请发送邮件至：<a href="mailto:arenillas_argon.48@icloud.com">arenillas_argon.48@icloud.com</a></p>
+<h2>十一、联系方式</h2>
+<p>如有任何隐私相关问题，包括数据删除请求，请发送邮件至：<a href="mailto:arenillas_argon.48@icloud.com">arenillas_argon.48@icloud.com</a></p>
 </div>
 
 </body>
